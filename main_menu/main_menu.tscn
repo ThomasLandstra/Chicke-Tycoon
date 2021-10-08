@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/fonts/GemunuLibre.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/themes/main_menu_theme.tres" type="Theme" id=2]
+[ext_resource path="res://src/themes/btn_theme.tres" type="Theme" id=3]
+[ext_resource path="res://main_menu/Exit.gd" type="Script" id=4]
+[ext_resource path="res://main_menu/main_menu.gd" type="Script" id=6]
+
+[node name="Main Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.25
+anchor_top = 0.025
+anchor_right = 0.75
+anchor_bottom = 0.125
+margin_left = 0.89093
+margin_right = 0.89093
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Chicke Tycoon"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button Container" type="Panel" parent="."]
+anchor_left = 0.2
+anchor_top = 0.15
+anchor_right = 0.8
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button Container"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="Button" parent="Button Container/VBoxContainer"]
+margin_right = 582.0
+margin_bottom = 71.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.258824, 0.258824, 0.258824, 1 )
+custom_colors/font_color_pressed = Color( 0.866667, 0.866667, 0.866667, 1 )
+text = "Continue"
+
+[node name="Load" type="Button" parent="Button Container/VBoxContainer"]
+margin_top = 79.0
+margin_right = 582.0
+margin_bottom = 150.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.258824, 0.258824, 0.258824, 1 )
+custom_colors/font_color_pressed = Color( 0.866667, 0.866667, 0.866667, 1 )
+text = "Load"
+
+[node name="New" type="Button" parent="Button Container/VBoxContainer"]
+margin_top = 158.0
+margin_right = 582.0
+margin_bottom = 229.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.258824, 0.258824, 0.258824, 1 )
+custom_colors/font_color_pressed = Color( 0.866667, 0.866667, 0.866667, 1 )
+text = "New"
+
+[node name="Settings" type="Button" parent="Button Container/VBoxContainer"]
+margin_top = 237.0
+margin_right = 582.0
+margin_bottom = 308.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.258824, 0.258824, 0.258824, 1 )
+custom_colors/font_color_pressed = Color( 0.866667, 0.866667, 0.866667, 1 )
+text = "Settings"
+
+[node name="Exit" type="Button" parent="Button Container/VBoxContainer"]
+margin_top = 316.0
+margin_right = 582.0
+margin_bottom = 388.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.258824, 0.258824, 0.258824, 1 )
+custom_colors/font_color_pressed = Color( 0.866667, 0.866667, 0.866667, 1 )
+text = "Exit"
+script = ExtResource( 4 )
